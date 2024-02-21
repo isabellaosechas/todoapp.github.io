@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	/* 1 */
+	border-width: 0;
+	/* 2 */
+	border-style: solid;
+	/* 2 */
+	border-color: #e5e7eb;
+	/* 2 */
+}
+
+body {
+	margin: 0;
+	font-family: "Poppins", sans-serif;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #f5f5f5;
+}
+
+#titulo {
+	font-size: 2rem;
+	font-weight: 700;
+	display: flex;
+	justify-content: center;
+	color: rgb(30, 25, 113);
+	margin: 30px 0;
+}
+
+#caja-tareas {
+	background-color: white;
+	border-radius: 0.3rem;
+	display: inline-block;
+	width: 40vh;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+
+/* **********  AGREGAR TAREAS   **************** */
+
+
+#agregar-tareas {
+	display: flex;
+	padding: 20px;
+	justify-content: space-around;
+	gap: 0.5rem;
+}
+
+#input-tarea {
+	border: 2px solid rgb(237, 236, 236);
+	background-color: rgb(237, 236, 236);
+	border-radius: 0.3rem;
+	font-size: 0.8rem;
+	font-family: "Poppins", sans-serif;
+	padding: 0.3rem;
+	width: 100%;
+}
+
+#boton-agregar {
+	width: 2rem;
+	height: 2rem;
+	padding: 0.25rem;
+	color: #ffffff;
+	background-color: rgb(30, 25, 113);
+	border-radius: 100%;
+	cursor: pointer;
+}
+
+#boton-agregar:hover {
+	background-color: rgb(101, 97, 163);
+}
+
+#icono-agregar {
+	display: flex;
+	color: #ffffff;
+	justify-content: center;
+	align-items: center;
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+/* **********  FIN AGREGAR TAREAS   **************** */
+
+
+/* ************ LISTA DE TAREAS *************** */
+
+#lista-tareas {
+	justify-content: space-between;
+}
+
+#lista {
+	padding: 0;
+	margin: 0%;
+}
+.tareas {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid rgb(222, 222, 222);
+}
+
+/* Iconos */
+
+.icono {
+	height: 2.5rem;
+	width: 2.5rem;
+	justify-content: space-between;
+}
+
+.eliminar {
+	color: #952c2c;
+}
+.eliminar:hover{
+	background-color: #952c2c;
+	color: #ffffff;
+}
+.check {
+	color: rgb(68, 137, 68);
+}
+.check:hover{
+	background-color: rgb(68, 137, 68);
+	color: #ffffff;
+}
+.e-subrayado {
+	background-color: rgb(68, 137, 68);
+	color: #ffffff;
+}
+
+
+/* Texto  */
+.subrayado {
+	color: gray;
+	text-decoration: line-through;
+}
+.tarea {
+	margin: 0%;
+	max-width: 10rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* ************ FIN LISTA DE TAREAS *************** */
+
+
+/* ************ CONTADOR **************** */
+
+
+#contadores {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	gap: 1rem;
+}
+
+#total {
+	height: 2rem;
+	width: 50%;
+	border-radius: 10px;
+	font-family: "Poppins", sans-serif;
+	color: #ffffff;
+	background-color: rgb(30, 25, 113);
+}
+#completas {
+	height: 2rem;
+	width: 50%;
+	border-radius: 10px;
+	font-family: "Poppins", sans-serif;
+	color: #ffffff;
+	background-color: rgb(68, 137, 68);
+}
+
+#incompletas {
+	height: 2rem;
+	width: 50%;
+	border-radius: 10px;
+	font-family: "Poppins", sans-serif;
+	color: #ffffff;
+	background-color: #952c2c;
+}
+
+/* ************ FIN CONTADOR **************** */
+
+
+/* *********** RESPONSIVE **************** */
+
+
+@media (min-width: 700px) {
+	#caja-tareas {
+		width: 70vh;
+	}
+	#contadores {
+		flex-direction: row;
+		gap: 2rem;
+	}
+	#total {
+		width: auto;
+	}
+	#completas {
+		width: auto;
+	}
+	#incompletas {
+		width: auto;
+	}
+}

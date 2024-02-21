@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	/* 1 */
+	border-width: 0;
+	/* 2 */
+	border-style: solid;
+	/* 2 */
+	border-color: #e5e7eb;
+	/* 2 */
+}
+
+body {
+	margin: 0;
+	font-family: "Poppins", sans-serif;
+	padding-top: 4rem;
+	height: 100vh;
+}
+
+/* ***************BARRA DE NAVEGACION*********************8 */
+
+#nav-bar {
+	height: 4rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: rgb(30, 25, 113);
+}
+
+#nav-bar-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: inherit;
+	padding: 0 1rem;
+	margin: 0 auto;
+	max-width: 80rem;
+	background-color: rgb(30, 25, 113);
+}
+
+#nav-bar-container > h2 {
+	margin: 0;
+	color: white;
+}
+
+#menu-icon {
+	width: 3rem;
+	height: 3rem;
+	padding: 0.25rem;
+	color: white;
+	border: 2px solid white;
+	border-radius: 0.5rem;
+}
+
+#menu-icon:active {
+	background-color: white;
+	color:rgb(30, 25, 113);
+}
+
+.link {
+	color: white;
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+#links-container {
+	display: none;
+	gap: 2rem;
+}
+
+/* ***********FIN BARRA DE NAVEGACION************* */
+
+/* ***********BODY********** */
+
+#main-container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 1rem;
+	gap: 1rem;
+	max-width: 80rem;
+	margin: 0 auto;
+}
+
+#main-title {
+	margin: 0;
+	text-align: center;
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: rgb(30, 25, 113);
+}
+
+#desc-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+#desc-text {
+	margin: 0;
+	text-align: justify;
+	color: rgb(24, 24, 24);
+}
+
+#desc-link {
+	background-color: rgb(30, 25, 113);
+	padding: 0.5rem 1rem;
+	border-radius: 0.375rem;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: 700;
+	color: white;
+	cursor: pointer;
+	transition: all 0.175s ease-in-out;
+}
+
+#desc-link:hover {
+	background-color: rgb(63, 58, 153);
+}
+
+/* ***********FIN BODY********** */
+
+/* ***********RESPONSIVE********** */
+@media (min-width: 768px) {
+	#menu-icon {
+		display: none;
+	}
+
+	#links-container {
+		display: flex;
+	}
+
+	#main-container {
+		flex-direction: row;
+		align-items: center;
+		width: 80%;
+	}
+
+	#main-title {
+		width: 50%;
+		font-size: 4rem;
+	}
+
+	#desc-container {
+		width: 50%;
+	}
+}
