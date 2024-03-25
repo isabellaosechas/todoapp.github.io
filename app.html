@@ -12,71 +12,36 @@
 		<!-- ------------Caja principal------------ -->
 		<div id="caja-tareas">
 			<!-- ------------Agregar tareas------------ -->
-			<div id="agregar-tareas">
-				<input id="input-tarea" placeholder="Add new task..." />
+				<form action="" id="form">
+					<input id="input-tarea" placeholder="Add new task..." />
 				<button type="submit" id="boton-agregar">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
  					id="icono-agregar"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
 				</button>
-			</div>
+				</form>
+				
 			<!-- ------------Fin Agregar tareas------------ -->
 
 			<!-- ------------Lista de Tareas------------ -->
 			<div id="lista-tareas">
 				<ul id="lista">
-					<!-- tarea1 -->
-					<li class="tareas">
-						<div class="icono eliminar">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"> <path
-							stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
-						</div>
-						<p class="tarea">Limpiar la casa</p>
-						<div class="icono check">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-							<path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /> </svg>
-						</div>
-					</li>
-					<!--Fin tarea1 -->
-
-					<!-- tarea2 -->
-					<li class="tareas">
-						<div class="icono eliminar">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-							<path stroke-linecap="round" troke-linejoin="round" d="M6 18 18 6M6 6l12 12" /> </svg>
-						</div>
-						<p class="tarea subrayado">Ir al supermercado</p>
-						<div class="icono check e-subrayado">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-							<path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /> </svg>
-						</div>
-					</li>
-					<!--Fin tarea2 -->
-
-					<!-- tarea3 -->
-					<li class="tareas">
-						<div class="icono eliminar">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /> </svg>
-						</div>
-						<p class="tarea">Hacer Tarea</p>
-						<div class="icono check">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-							<path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /> </svg>
-						</div>
-					</li>
-					<!--Fin  tarea3 -->
+				
 				</ul>
 			</div>
 			<!-- ------------Fin Lista de Tareas------------ -->
 
 			<!-- ------------Contadores------------ -->
 			<div id="contadores">
-				<button id="total">Total: 3</button>
-				<button id="completas">Completas: 1</button>
-				<button id="incompletas">Incompletas: 2</button>
+				<button id="total">Total: 0</button>
+				<button id="completas">Completas: 0</button>
+				<button id="incompletas">Incompletas: 0</button>
 			</div>
 			<!-- ------------Fin Contadores------------ -->
 		</div>
 		<!-- ------------Fin Caja Pincipal------------ -->
+
+
+
+		<script src="app.js"></script> 
 	</body>
 </html>

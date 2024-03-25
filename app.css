@@ -16,12 +16,13 @@
 body {
 	margin: 0;
 	font-family: "Poppins", sans-serif;
+	color: #ffffff;
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background-color: #f5f5f5;
+	background-color: rgb(15, 23, 42);
 }
 
 #titulo {
@@ -29,37 +30,35 @@ body {
 	font-weight: 700;
 	display: flex;
 	justify-content: center;
-	color: rgb(30, 25, 113);
 	margin: 30px 0;
 }
 
 #caja-tareas {
-	background-color: white;
+	background-color: rgb(30, 41, 59);
 	border-radius: 0.3rem;
 	display: inline-block;
 	width: 40vh;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-
 /* **********  AGREGAR TAREAS   **************** */
 
-
-#agregar-tareas {
+form {
 	display: flex;
+	border-bottom: 0.5px solid rgb(76, 89, 108);
 	padding: 20px;
-	justify-content: space-around;
 	gap: 0.5rem;
 }
 
 #input-tarea {
-	border: 2px solid rgb(237, 236, 236);
-	background-color: rgb(237, 236, 236);
+	border: 2px solid rgb(71, 85, 105);
+	background-color: rgb(71, 85, 105);
 	border-radius: 0.3rem;
 	font-size: 0.8rem;
 	font-family: "Poppins", sans-serif;
 	padding: 0.3rem;
 	width: 100%;
+	color: #efefef;
 }
 
 #boton-agregar {
@@ -67,13 +66,13 @@ body {
 	height: 2rem;
 	padding: 0.25rem;
 	color: #ffffff;
-	background-color: rgb(30, 25, 113);
+	background-color: rgb(139, 92, 246);
 	border-radius: 100%;
 	cursor: pointer;
 }
 
 #boton-agregar:hover {
-	background-color: rgb(101, 97, 163);
+	background-color: rgb(98, 61, 184);
 }
 
 #icono-agregar {
@@ -87,11 +86,12 @@ body {
 
 /* **********  FIN AGREGAR TAREAS   **************** */
 
-
 /* ************ LISTA DE TAREAS *************** */
 
 #lista-tareas {
-	justify-content: space-between;
+	height: 15rem;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 #lista {
@@ -102,55 +102,58 @@ body {
 	list-style: none;
 	display: flex;
 	justify-content: space-between;
-	border-top: 1px solid rgb(222, 222, 222);
+	align-items: center;
+	border-bottom: 0.5px solid  rgb(76, 89, 108);
 }
 
 /* Iconos */
 
-.icono {
+#icono-eliminar {
 	height: 2.5rem;
 	width: 2.5rem;
 	justify-content: space-between;
+	color: rgb(238, 68, 68);
 }
 
-.eliminar {
-	color: #952c2c;
+.icono-check {
+	height: 2.5rem;
+	width: 2.5rem;
+	justify-content: space-between;
+	color: rgb(34, 196, 94);
 }
-.eliminar:hover{
-	background-color: #952c2c;
+
+#icono-eliminar:hover {
+	background-color: rgb(238, 68, 68);
 	color: #ffffff;
 }
 .check {
-	color: rgb(68, 137, 68);
-}
-.check:hover{
-	background-color: rgb(68, 137, 68);
-	color: #ffffff;
-}
-.e-subrayado {
-	background-color: rgb(68, 137, 68);
+	background-color: rgb(34, 196, 94);
 	color: #ffffff;
 }
 
+.icono-check:hover {
+	background-color: rgb(34, 196, 94);
+	color: #ffffff;
+}
 
 /* Texto  */
-.subrayado {
+.tarea-hecha {
 	color: gray;
 	text-decoration: line-through;
 }
 .tarea {
 	margin: 0%;
-	max-width: 10rem;
+	width: 10rem;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
+	word-break: break-word;
+	font-size: 0.8rem;
 }
 
 /* ************ FIN LISTA DE TAREAS *************** */
 
-
 /* ************ CONTADOR **************** */
-
 
 #contadores {
 	display: flex;
@@ -168,7 +171,7 @@ body {
 	border-radius: 10px;
 	font-family: "Poppins", sans-serif;
 	color: #ffffff;
-	background-color: rgb(30, 25, 113);
+	background-color: rgb(139, 92, 246);
 }
 #completas {
 	height: 2rem;
@@ -176,7 +179,7 @@ body {
 	border-radius: 10px;
 	font-family: "Poppins", sans-serif;
 	color: #ffffff;
-	background-color: rgb(68, 137, 68);
+	background-color: rgb(34, 196, 94);
 }
 
 #incompletas {
@@ -185,16 +188,14 @@ body {
 	border-radius: 10px;
 	font-family: "Poppins", sans-serif;
 	color: #ffffff;
-	background-color: #952c2c;
+	background-color: rgb(238, 68, 68);
 }
 
 /* ************ FIN CONTADOR **************** */
 
-
 /* *********** RESPONSIVE **************** */
 
-
-@media (min-width: 700px) {
+@media (min-width: 580px) {
 	#caja-tareas {
 		width: 70vh;
 	}
@@ -210,5 +211,10 @@ body {
 	}
 	#incompletas {
 		width: auto;
+	}
+
+	.tarea{
+		width: 20rem;
+		font-size: 1rem;
 	}
 }
